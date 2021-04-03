@@ -25,7 +25,33 @@
             
         </header>
 
+    
         <main>
+
+            <form action="telegram.php" method="POST" class="contacts__form">
+                <label for="name" class="contacts__name">
+                    <input
+                        type="text"
+                        name="user_name"
+                        id="name"
+                        placeholder="Имя*"
+                        pattern="^[АA-ЯZаa-яzЁё\s]+$"
+                        title="Используйте только буквы латиницы либо кириллицы"
+                        class="contacts__input">
+                </label>
+                <label for="phone" class="contacts__tel">
+                    <input
+                        type="tel"
+                        name="user_phone"
+                        id="phone"
+                        placeholder="Телефон*"
+                        minlength="10" maxlength="13"
+                        pattern="^[\+ 0-9]+$"
+                        title="Введите корректный номер телефона (в формате +380XXXXXXXXX или 0XXXXXXXXX)"
+                        class="contacts__input">
+                </label>
+                <button type="submit" class="contacts__submit">хочу на бесплатное занятие</button>
+            </form>
             <!-- Hero -->
             <div>
                 <section>
